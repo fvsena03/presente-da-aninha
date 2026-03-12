@@ -13,13 +13,13 @@ background:#08142b;
 overflow:hidden;
 }
 
-/* noite */
+/* fundo */
 
 .night{
 position:absolute;
 width:100%;
 height:100%;
-background:radial-gradient(circle,#0d1c3d,#02040c);
+background:radial-gradient(circle,#0c1c3a,#02040c);
 }
 
 /* buque */
@@ -34,84 +34,76 @@ animation:grow 2s ease forwards;
 
 .flowers{
 position:relative;
-width:260px;
-height:220px;
+width:320px;
+height:240px;
 }
 
-/* flor */
+/* lirio */
 
 .flower{
 position:absolute;
 width:70px;
 height:70px;
-animation:sway 4s ease-in-out infinite;
-}
-
-/* pétalas */
-
-.petal{
-position:absolute;
-width:32px;
-height:60px;
-background:radial-gradient(circle,#ff2f92 10%,#ff6ab7 40%,white 80%);
-border-radius:50% 50% 40% 40%;
-left:50%;
-top:50%;
-transform-origin:bottom center;
-}
-
-.petal:nth-child(1){transform:translate(-50%,-100%) rotate(0deg);}
-.petal:nth-child(2){transform:translate(-50%,-100%) rotate(60deg);}
-.petal:nth-child(3){transform:translate(-50%,-100%) rotate(120deg);}
-.petal:nth-child(4){transform:translate(-50%,-100%) rotate(180deg);}
-.petal:nth-child(5){transform:translate(-50%,-100%) rotate(240deg);}
-.petal:nth-child(6){transform:translate(-50%,-100%) rotate(300deg);}
-
-/* centro */
-
-.center{
-position:absolute;
-width:16px;
-height:16px;
-background:#ff2f92;
+background:radial-gradient(circle,#ff2f92 10%,#ff6ab7 35%,white 80%);
 border-radius:50%;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-box-shadow:0 0 8px #ff6ab7;
+box-shadow:0 0 20px #ff6ab7;
+animation:sway 5s ease-in-out infinite;
 }
 
-/* posição flores */
+/* posições */
 
-.flower1{top:0;left:20px;z-index:1;transform:scale(.9);}
-.flower2{top:0;right:20px;z-index:1;transform:scale(.9);}
+.f1{top:0;left:40px;transform:scale(.9);z-index:1;}
+.f2{top:0;right:40px;transform:scale(.9);z-index:1;}
 
-.flower3{top:50px;left:95px;z-index:3;}
-.flower4{top:90px;left:20px;z-index:3;}
-.flower5{top:90px;right:20px;z-index:3;}
+.f3{top:40px;left:120px;z-index:3;}
+.f4{top:80px;left:20px;z-index:3;}
+.f5{top:80px;right:20px;z-index:3;}
+
+.f6{top:120px;left:90px;z-index:4;}
+.f7{top:120px;right:90px;z-index:4;}
 
 /* caules */
 
 .stems{
-width:8px;
-height:160px;
-background:linear-gradient(#1c7a3c,#0a3f1d);
+width:10px;
+height:200px;
+background:linear-gradient(#2ca94d,#0a3f1d);
 border-radius:4px;
-margin-top:-10px;
+margin-top:-20px;
+}
+
+/* folhas */
+
+.leaves{
+position:absolute;
+width:200px;
+height:100px;
+background:radial-gradient(circle at left,#2ca94d,transparent);
+top:200px;
+}
+
+/* papel buque */
+
+.paper{
+width:200px;
+height:120px;
+background:linear-gradient(#f5e6c8,#e8d2a0);
+border-radius:20px;
+margin-top:-20px;
 }
 
 /* laço */
 
 .ribbon{
-width:70px;
-height:30px;
+width:80px;
+height:35px;
 background:#ff2f92;
-border-radius:30px;
+border-radius:40px;
 margin-top:-30px;
-box-shadow:0 0 12px #ff6ab7;
+box-shadow:0 0 10px #ff6ab7;
 }
 
-/* animação */
+/* animações */
 
 @keyframes grow{
 
@@ -166,7 +158,7 @@ border-radius:50%;
 
 }
 
-/* vaga-lumes */
+/* vagalumes */
 
 .fireflies::before,
 .fireflies::after{
@@ -177,13 +169,13 @@ height:6px;
 background:#fff3a6;
 border-radius:50%;
 box-shadow:0 0 10px #fff3a6;
-animation:fly 5s infinite alternate;
+animation:fly 6s infinite alternate;
 }
 
 @keyframes fly{
 
 0%{transform:translate(0,0)}
-100%{transform:translate(200px,-200px)}
+100%{transform:translate(300px,-200px)}
 
 }
 
