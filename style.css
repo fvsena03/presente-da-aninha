@@ -9,130 +9,87 @@ height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-background:#08142b;
+background:radial-gradient(circle,#0a1a3f,#02040c);
 overflow:hidden;
+font-family:sans-serif;
 }
 
-/* fundo */
-
-.night{
-position:absolute;
-width:100%;
-height:100%;
-background:radial-gradient(circle,#0c1c3a,#02040c);
+.scene{
+position:relative;
 }
 
-/* buque */
+/* BUQUÊ */
 
 .bouquet{
 position:relative;
+width:320px;
+height:400px;
 display:flex;
 flex-direction:column;
 align-items:center;
-animation:grow 2s ease forwards;
 }
 
-.flowers{
-position:relative;
-width:320px;
-height:240px;
-}
-
-/* lirio */
+/* FLORES */
 
 .flower{
 position:absolute;
-width:70px;
-height:70px;
-background:radial-gradient(circle,#ff2f92 10%,#ff6ab7 35%,white 80%);
+width:60px;
+height:60px;
 border-radius:50%;
+background:radial-gradient(circle,#ff2f92 10%,#ff6ab7 35%,white 80%);
 box-shadow:0 0 20px #ff6ab7;
-animation:sway 5s ease-in-out infinite;
+animation:sway 4s infinite ease-in-out;
 }
 
-/* posições */
+/* POSIÇÕES */
 
-.f1{top:0;left:40px;transform:scale(.9);z-index:1;}
-.f2{top:0;right:40px;transform:scale(.9);z-index:1;}
+.f1{top:0;left:40px;}
+.f2{top:0;right:40px;}
 
-.f3{top:40px;left:120px;z-index:3;}
-.f4{top:80px;left:20px;z-index:3;}
-.f5{top:80px;right:20px;z-index:3;}
+.f3{top:40px;left:130px;}
+.f4{top:80px;left:10px;}
+.f5{top:80px;right:10px;}
 
-.f6{top:120px;left:90px;z-index:4;}
-.f7{top:120px;right:90px;z-index:4;}
+.f6{top:120px;left:80px;}
+.f7{top:120px;right:80px;}
 
-/* caules */
+/* CAULES */
 
 .stems{
-width:10px;
+width:8px;
 height:200px;
 background:linear-gradient(#2ca94d,#0a3f1d);
-border-radius:4px;
-margin-top:-20px;
+margin-top:130px;
+border-radius:5px;
 }
 
-/* folhas */
-
-.leaves{
-position:absolute;
-width:200px;
-height:100px;
-background:radial-gradient(circle at left,#2ca94d,transparent);
-top:200px;
-}
-
-/* papel buque */
+/* PAPEL DO BUQUÊ */
 
 .paper{
 width:200px;
 height:120px;
-background:linear-gradient(#f5e6c8,#e8d2a0);
-border-radius:20px;
+background:linear-gradient(#f4e3c1,#e5cfa2);
 margin-top:-20px;
+border-radius:20px;
 }
 
-/* laço */
+/* LAÇO */
 
 .ribbon{
-width:80px;
-height:35px;
+width:70px;
+height:30px;
 background:#ff2f92;
-border-radius:40px;
+border-radius:30px;
 margin-top:-30px;
 box-shadow:0 0 10px #ff6ab7;
 }
 
-/* animações */
-
-@keyframes grow{
-
-0%{
-transform:scale(0);
-opacity:0;
-}
-
-100%{
-transform:scale(1);
-opacity:1;
-}
-
-}
-
-@keyframes sway{
-
-0%{transform:rotate(-2deg)}
-50%{transform:rotate(2deg)}
-100%{transform:rotate(-2deg)}
-
-}
-
-/* corações */
+/* CORAÇÕES */
 
 .heart{
 position:absolute;
-width:18px;
-height:18px;
+width:20px;
+height:20px;
 background:#ff4b6e;
 transform:rotate(45deg);
 animation:float 6s infinite;
@@ -140,45 +97,41 @@ animation:float 6s infinite;
 
 .heart::before,
 .heart::after{
-content:'';
+content:"";
 position:absolute;
-width:18px;
-height:18px;
+width:20px;
+height:20px;
 background:#ff4b6e;
 border-radius:50%;
 }
 
-.heart::before{top:-9px;}
-.heart::after{left:-9px;}
+.heart::before{
+top:-10px;
+}
+
+.heart::after{
+left:-10px;
+}
+
+.h1{left:50px;animation-delay:0s;}
+.h2{left:200px;animation-delay:2s;}
+.h3{left:120px;animation-delay:4s;}
+
+/* ANIMAÇÕES */
+
+@keyframes sway{
+0%{transform:rotate(-2deg)}
+50%{transform:rotate(2deg)}
+100%{transform:rotate(-2deg)}
+}
 
 @keyframes float{
-
-0%{bottom:-50px;}
-100%{bottom:110%;}
-
+0%{
+bottom:-20px;
+opacity:1;
 }
-
-/* vagalumes */
-
-.fireflies::before,
-.fireflies::after{
-content:'';
-position:absolute;
-width:6px;
-height:6px;
-background:#fff3a6;
-border-radius:50%;
-box-shadow:0 0 10px #fff3a6;
-animation:fly 6s infinite alternate;
+100%{
+bottom:500px;
+opacity:0;
 }
-
-@keyframes fly{
-
-0%{transform:translate(0,0)}
-100%{transform:translate(300px,-200px)}
-
-}
-
-.container *{
-animation-play-state:paused;
 }
