@@ -1,5 +1,1 @@
-window.onload = () => {
-
-document.body.classList.remove("container");
-
-};
+console.log("Buquê carregado");
